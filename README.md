@@ -1,4 +1,4 @@
-# Tkinter - GUI Interface
+# 🚀 Tkinter - GUI Interface
 
 It represents all the Basics and Elementary concepts of GUI Interface of Python Tkinter, and contains all the needed code concepts for proper implementation and creation of a Basic GUI Application.
 
@@ -7,6 +7,11 @@ This GitHub repository features a collection of Python projects utilizing Tkinte
 ## Getting Started with it
 
 Python offers multiple options for developing GUI (Graphical User Interface). Out of all the GUI methods, tkinter is the most commonly used method. It is a standard Python interface to the Tk GUI toolkit shipped with Python. Python Tkinter is the fastest and easiest way to create GUI applications. Creating a GUI using Tkinter is an easy task.
+
+## 🛠 Skills Used
+
+- *[Python Setup](https://www.python.org/downloads/)*
+- *[Documentation](https://www.python.org/doc/)*
 
 ## Installing Tkinter
 
