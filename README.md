@@ -28,6 +28,26 @@ import tkinter as tk
 tk._test()
 ```
 
+Initiating the Window with **Tk()**
+
+To create a main window, tkinter offers a method ‘Tk(screenName=None,  baseName=None,  className=’Tk’,  useTk=1)’. To change the name of the window, you can change the className to the desired one.
+
+Ending it the **mainloop()** Method
+
+There is a method known by the name mainloop() is used when your application is ready to run. mainloop() is an infinite loop used to run the application, wait for an event to occur, and process the event as long as the window is not closed.
+
+General Syntax Code : 
+
+```python
+import tkinter as tk                    # Module Imported
+window = tk.Tk()                        # Main window Initiated
+"""
+widgets........
+frames.........
+"""
+window.mainloop()
+```
+
 ## Basic Widgets for GUI
 
 Creating Interactive applications using Tkinter’s, using basic widgets. From simple frames and labels to more complex elements like scrollable frames and treeviews, we’ll cover a wide range of widgets and their customization options.
