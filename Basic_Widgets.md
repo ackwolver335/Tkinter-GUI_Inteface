@@ -31,7 +31,7 @@ Tkinter Label is a widget that is used to implement display boxes where you can 
 
 It is important to note that a label can use only one font at a time to display text. To use a label, you just have to specify what to display in it (this can be text, a bitmap, or an image).
 
-## Different Args in Label
+### Different Args in Label
 
 1. **Simple Label** : Used for creating simple text label at the beginning with general pack methods.
 
