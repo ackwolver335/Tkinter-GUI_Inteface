@@ -25,6 +25,12 @@ Below we have the combined table for **Basic Widgets** and their uses in *Python
 | *Menu* | Provides a Menu Bar similar to the one available on different Application's Top Side |
 | *Canvas* | Used for Drawing different lines,text and Visuals. |
 
+## Tkinter - Label Widget
+
+Tkinter Label is a widget that is used to implement display boxes where you can place text or images. The text displayed by this widget can be changed by the developer at any time you want. It is also used to perform tasks such as underlining the part of the text and spanning the text across multiple lines. 
+
+It is important to note that a label can use only one font at a time to display text. To use a label, you just have to specify what to display in it (this can be text, a bitmap, or an image).
+
 ## Different Args in Label
 
 1. **Simple Label** : Used for creating simple text label at the beginning with general pack methods.
@@ -119,3 +125,7 @@ lf1.place(x = 10,y = 10)
 lf2 = tk.Label(lframe,text = "Second Label of Frame")
 lf2.place(x = 10,y = 20)
 ```
+
+## Tkinter - Button Widget
+
+The Tkinter Button widget is a graphical control element used in Python’s Tkinter library to create clickable buttons in a graphical user interface (GUI). It provides a way for users to trigger actions or events when clicked.
