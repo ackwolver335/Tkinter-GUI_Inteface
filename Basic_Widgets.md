@@ -129,3 +129,105 @@ lf2.place(x = 10,y = 20)
 ## Tkinter - Button Widget
 
 The Tkinter Button widget is a graphical control element used in Python’s Tkinter library to create clickable buttons in a graphical user interface (GUI). It provides a way for users to trigger actions or events when clicked.
+
+### Different Button's Overviews
+
+1. **Button()** : This method includes simple button widget of tkinter in the main window of the App.
+
+*Syntax Code :*
+
+```python
+btn1 = tk.Button(window,text = "Simple Button")
+btn1.pack()
+```
+
+2. **Active Interfaces** : This method is used in order to keep the view of the Button changed when the user press on it.
+
+*Syntax Code :*
+
+```python
+btn2 = tk.Button(window,text = "Active Changes",activebackground = "green",activeforeground = "yellow")
+btn2.pack()
+```
+
+3. **Replacing Method** : This method is used in order to change the position of the Button using anchor argument as one of its example is been shown below.
+
+*Sytnax Code :*
+
+```python
+btn3 = tk.Button(window,text = "Differ Position",anchor = 'sw')
+btn3.pack()
+```
+
+4. **Border Method** : This method is used in order to create a Button containing Border on its all sides together with different of its arguments and options.
+
+```python
+btn4 = tk.Button(window,text = "Border Method",border = 3,borderwidth = 4,relief = 'groove')
+btn4.pack()
+```
+
+5. **Height, Width and Padding** : These arguments are used in order to maintain the height width and padding space of the buttons in the GUI Interface.
+
+*Syntax Code :*
+
+```python
+btn5 = tk.Button(window,text = "Maintained",height = 5,width = 20,padx = 2,pady = 3)
+btn5.pack()
+```
+
+6. **Highlighting Options** : These are some arguments used in a way to get the Button Highlighted at a specific moment.
+
+*Syntax Code :*
+
+```python
+btn6 = tk.Button(window,text = "Highlight",highlightbackground = "green",highlightcolor = "yellow",highlightthickness = 3)
+btn6.pack()
+```
+
+7. **Close Window** : This command is used simply in order to close the window created by the Tkinter Module Functionality.
+
+*Syntax Code :*
+
+```python
+btn7 = tk.Button(window,text = "Close",command = window.destroy)
+btn7.pack()
+```
+
+8. **Justification and Wrapping** : These arguments are used in order to justify the button at a specific position and wraplength as per the width of the main window.
+
+*Syntax Code :*
+
+```python
+btn8 = tk.Button(window,text = "Different",justify = "center",wraplength = 100)
+btn8.pack()
+```
+
+9. **Multiple Commands** : This method or procedure is useful in order to run multiple methods or commands at once, this is done using lambda keyword by wrapping multiple methods in one single list.
+
+*Syntax Code :*
+
+```python
+# Methods
+def first1():
+    print("First Method Initiated")
+
+def second():
+    print("Second Method Initiated")
+
+btn9 = tk.Button(window,text = "Multiple",command = lambda : [first1(),second()])
+btn9.pack()
+```
+
+10. **Opening New Window** : This method is useful when we need to create a new window using similar button just by one click.
+
+*Syntax Code :*
+
+```python
+def newindow():
+    w1 = tk.Tk()
+    w1.title("New Window")
+    w1.geometry("500x400")
+
+btn10 = tk.Button(window,text = "New Window",command = newindow)
+btn10.pack()
+```
