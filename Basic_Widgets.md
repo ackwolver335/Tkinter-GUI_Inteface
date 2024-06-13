@@ -231,3 +231,111 @@ def newindow():
 btn10 = tk.Button(window,text = "New Window",command = newindow)
 btn10.pack()
 ```
+
+## Tkinter - Entry Widget
+
+Python offers multiple options for developing a GUI (Graphical User Interface). Out of all the GUI methods, Tkinter is the most commonly used method. Python with Tkinter is the fastest and easiest way to create GUI applications. Creating a GUI using Tkinter is an easy task.
+
+The Entry Widget is a Tkinter Widget used to Enter or display a single line of text.
+
+### Different Entry Args
+
+1. **Default Args** : This method in tkinter Entry is used in order to keep the Entry at Basic Levels, also adding font,padding is similar to the one we used in label widget.
+
+*Syntax Code :*
+
+```python
+E1 = tk.Entry(window,font = ('Fira Code',10,'bold'))
+E1.pack()
+```
+
+2. **Button Submittion** : This is an overall procedure in which we uses the Button together with the Entry Widget in Tkinter window to keep them working together to get the general required output from the users.
+
+*Syntax Code :*
+
+```python
+L1 = tk.Label(window,text = "Enter your good name : ")
+L1.pack()
+
+E2 = tk.Entry(window)
+E2.pack()
+
+def command1():
+    print(E1.get())
+    window.destroy()
+
+B1 = tk.Button(window,text = "Submit Data")
+B1.pack()
+```
+
+3. **Canvas** : This method includes creating canvas in tkinter window that includes different lines, and working projects with it together with having a better explanation with the code below.
+
+*Syntax Code :*
+
+```python
+c1 = tk.Canvas(w1,width = 250,height = 150)
+c1.pack()
+
+l2 = tk.Label(w1,text = "Enter your good name")
+c1.create_window(100,110,window = l2)
+
+l3 = tk.Label(w1,text = "Enter your owned email")
+c1.create_window(100,150,window = l3)
+
+e2 = tk.Entry(w1)
+c1.create_window(200,110,window = e2)
+
+e3 = tk.Entry(w1)
+c1.create_window(200,150,window = e3)
+
+def command2():
+    messagebox.showinfo("Submitted","Your data is been submitted successfully !")
+    e2.delete(0)
+    e3.delete(0)
+
+btn2 = tk.Button(w1,text = "Submit Data")
+c1.create_window(150,200,window = btn2)
+```
+
+4. **get()** : This is a common method used by the Programmers and Developers for getting the data of the Entry created in order to take input from the user.
+
+*Syntax Code :*
+
+```python
+L1 = tk.Label(window,text = "Enter your name here : ")
+L1.pack()
+
+E1 = tk.Entry(window)
+E1.pack()
+```
+
+5. **delete()** : This method is simply used in order to delete the data from the Entry created in order to refresh for further details coming from the user's side.
+
+*Syntax Code :*
+
+```python
+E1 = tk.Entry(window)
+E1.pack()
+
+B1 = tk.Button(window,text = "Clear Data",command = E1.delete(0))
+B1.pack()
+```
+
+6. **insert()** : It is the method used in tkinter in order to make changes or insert the default value or data to the Entry Widget in tkinter.
+
+*Syntax Code :*
+
+```python
+E1 = tk.Entry(window)
+E1.insert(0,"Default Data")
+E1.pack()
+```
+
+7. **Disabled Entry** : This is an optional argument used in order to get the entry disabled based on a particular condition or whenever the programmer or developer wants to.
+
+*Syntax Code :*
+
+```python
+E1 = tk.Entry(window,state = DISABLED,justify = "center")
+E1.pack()
+```
