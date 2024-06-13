@@ -1,4 +1,3 @@
-from logging import disable
 import tkinter as tk
 from tkinter import DISABLED, StringVar, messagebox
 
