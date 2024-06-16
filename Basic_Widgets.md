@@ -339,3 +339,82 @@ E1.pack()
 E1 = tk.Entry(window,state = DISABLED,justify = "center")
 E1.pack()
 ```
+
+## Tkinter - Frame Widget
+
+A frame is a rectangular region on the screen. A frame can also be used as a foundation class to implement complex widgets. It is used to organize a group of widgets.
+
+### Some Args Options : 
+
+- **bg** : This option used to represent the normal background color displayed behind the label and indicator.
+- **bd**: This option used to represent the size of the border around the indicator and the default value is 2 pixels.
+- **cursor** : By using this option, the mouse cursor will change to that pattern when it is over the frame.
+- **height** : The vertical dimension of the new frame.
+- **highlightcolor** : This option used to represent the color of the focus highlight when the frame has the focus.
+- **highlightthickness** : This option used to represent the color of the focus highlight when the frame does not have focus.
+- **highlightbackground** : This option used to represent the thickness of the focus highlight..
+- **relief** : The type of the border of the frame. It’s default value is set to FLAT.
+- **width** : This option used to represents the width of the frame.
+
+### Args/Methods Implementation
+
+1. **General Frame with Label** : This method contains the availability and combination of different labels inside a particular frame together by its different customization options and methods included in it. 
+
+*Syntax Code :*
+
+```python
+# frame
+frame = tk.Frame(window,bg = "red",bg = 4,height = 100,width = 200,highlightbackground = "blue",highlightcolor = "green",relief = "groove")
+frame.pack(padx = 3,pady = 4)
+
+# Labels
+l1 = tk.Label(frame,text = "Coding",font = ('Calibri',10),bg = "lightgreen",bd = 2,height = 3,width = 10)
+l1.pack(padx = 2,pady = 2)
+
+l2 = tk.Label(frame,text = "Programming",font = ('Arial',8),bg = "lightgreen",bd = 3,height = 2,width = 20)
+l2.pack(padx = 2,pady = 2)
+```
+
+2. **Scrollable Frames** : This procedure include different options regarding horizontal and vertical formats for creating a scrollable frame together with different of its labels and textual data to be good looking in the final window.
+
+*Syntax Code :*
+
+```python
+# Horizontal Scrollbar
+h1 = tk.Scrollbar(window,orient = "horizontal")
+h1.pack(side = "bottom",fill = "x")
+
+# Vertical Scrollbar
+v1 = tk.Scrollbar(window)
+v1.pack(side = "right",fill = "y")
+
+# Adding Textual Data
+t1 = tk.Text(window,height = 10,width = 10,wrap = "none",xscrollcommand = h1.set,yscrollcommand = v1.set)
+
+for i in range(13):
+    t1.insert(tk.END,"Data Inserted\n")
+
+t1.pack(side = "top",fill = "x")
+
+# Configuration of Views
+h1.config(command = t1.xview)
+v1.config(command = t1.yview)
+```
+
+3. **Changing LabelFrame Border** : This process includes changing of border that is been initialised using different themes of the Labelframes regarding its frames.
+
+*Syntax Code :*
+
+```python
+import tkinter.ttk as tk1
+
+st1 = tk1.style()               # Styles
+st1.theme_use("clam")
+st1.configure("TLabelFrame",bordercolor = "red")
+
+lframe1 = tk.LabelFrame(window,text = "Frame1")
+lframe1.pack(padx = 20,pady = 20)
+
+label1 = tk.Label(lframe1,text = "First One")
+label1.pack()
+```
