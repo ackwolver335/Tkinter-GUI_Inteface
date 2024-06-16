@@ -2,8 +2,8 @@ import tkinter as tk
 import tkinter.ttk as tk1
 
 w1 = tk.Tk()
-w1.title("Frame Widgets")
-w1.geometry("400x300")
+w1.title("Frame Widget")
+w1.geometry("500x450")
 # w1.overrideredirect(True)         # Used for creating frameless window
 
 # Frame
