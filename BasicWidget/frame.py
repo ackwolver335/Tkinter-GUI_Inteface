@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.ttk as tk1
 
 w1 = tk.Tk()
 w1.title("Frame Widgets")
@@ -36,10 +37,17 @@ h1.config(command = t1.xview)
 v1.config(command = t1.yview)
 
 # Changing Label Frame Border
-lframe1 = tk.LabelFrame(w1,text = "Frame1",height = 10,width = 50)
-lframe1.pack(padx = 5,pady = 5)
+# Adding Style Method/Functions
+st1 = tk1.Style()
+
+# Using already defined theme
+st1.theme_use("clam")
+st1.configure("TLabelFrame",bordercolor = "red")
+
+lframe1 = tk1.LabelFrame(w1,text = "Frame1")
+lframe1.pack(padx = 30,pady = 30)
 
 label1 = tk.Label(lframe1,text = "First One")
-label1.pack(padx = 2,pady = 3)
+label1.pack()
 
 w1.mainloop()
