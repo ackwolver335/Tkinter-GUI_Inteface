@@ -43,7 +43,7 @@ l7.place(relx = 0.5,rely = 0.5)
 
 # Label Frame
 lframe1 = tk.LabelFrame(window,text = "Label Frame",padx = 5,pady = 5)
-lframe1.pack(expand = "yes",fill = "both")
+lframe1.pack(expand = True,fill = "both")
 
 # Labels for labelFrame
 lf1 = tk.Label(lframe1,text = "First One")
