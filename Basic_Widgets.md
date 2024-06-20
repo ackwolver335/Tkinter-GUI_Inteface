@@ -418,3 +418,107 @@ lframe1.pack(padx = 20,pady = 20)
 label1 = tk.Label(lframe1,text = "First One")
 label1.pack()
 ```
+
+## Tkinter - CheckButton Widget
+
+The Checkbutton widget is a standard Tkinter widget that is used to implement on/off selections. Checkbuttons can contain text or images. When the button is pressed, Tkinter calls that function or method.
+
+### Methods in Checkbutton :
+
+| **Method Name** | **Uses** |
+| --------------- | -------- |
+| **deselect()** | It is used in order to turn off checkbutton from getting selected |
+| **flash()** | It is used to flash the checkbutton between active and normal colors |
+| **invoke()** | This is used to invoke() any method associated with the checkbutton |
+| **select()** | It is used to select the checkbutton or to turn it on |
+| **toggle()** | It is used for toggling between different checkbuttons |
+
+### Different Usages of Checkbuttons 
+
+1. **On Button Toggle Method** : This method or procedure is used in order to create a Checkbutton, together by its basic requirements to be fulfilled on checking at run time. This is a creative method regarding it.
+
+*Syntax Code :*
+
+```python
+def cb_command():                               # Method to be initiated, when checkbutton is used
+    if var1.get() == 1:
+        print("Checkbutton is Turned ON")
+    else:
+        print("Checkbutton is Turned OFF")
+
+var1 = tk.IntVar()                              # variable for taking input from checkbutton
+cb1 = tk.Checkbutton(window,text = "Check1",variable = var1,onvalue = 1,offvalue = 0,command = cb_command)
+cb1.pack(padx = 10,pady = 10)
+```
+
+2. **Multiple CheckButton** : This is another method or process for proper implementation of Multiple Checkbutton at once for providing a particular multiple choice question format to the user over to the GUI Window.
+
+*Syntax Code :*
+
+```python
+var1 = tk.IntVar()          # Creating fot checkbutton activity
+var2 = tk.IntVar()
+var3 = tk.IntVar()
+
+frm1 = tk.Frame(window,bd = 3,relief = 'groove',width = 300,height = 20)        # creating frame for checkbuttons
+frm1.pack(padx = 10,pady = 10)
+
+lb1 = tk.Label(window,text = "Checkbutton Choices",font = ('Fira Code',10))     # label for defining the frame
+lb1.pack(padx = 2,pady = 3)
+
+# defining a checkbutton
+cbtn1 = tk.Checkbutton(frm1,text = "Choice1",variable = var1,onvalue = 1,offvalue = 0)
+cbtn2 = tk.Checkbutton(frm1,text = "Choice2",variable = var1,onvalue = 1,offvalue = 0)
+cbtn3 = tk.Checkbutton(frm1,text = "Choice3",variable = var1,onvalue = 1,offvalue = 0)
+
+# packing them inside the frame
+cbtn1.pack()
+cbtn2.pack()
+cbtn3.pack()
+```
+
+3. **Using Focus** : This is an argument which is been used in order to keep the focus of a particular checkbutton over to a particular option or not. Also this is been done by using ttk Module of TKinter Library.
+
+*Syntax Code :*
+
+```python
+import tkinter.ttk as tk1           # required module for taking focus at checkbuttons
+import tkinter as tk
+
+frm1 = tk.Frame(window,bd = 1,width = width = 300,height = 20)                          # frame added
+frm1.pack(padx = 5,pady = 8)
+
+lb1 = tk.Label(frm1,text = "Programming Languages",bd = 1,font = ('Fira Code',12))      # label added
+lb1.pack(padx = 4,pady = 6)
+
+# adding checkbuttons
+ckbtn1 = tk1.Checkbutton(frm1,text = "Java",takefocus = 1)
+ckbtn2 = tk1.Checkbutton(frm1,text = "Python",takefocus = 1)
+
+# packing checkbuttons
+ckbtn1.pack(padx = 2,pady = 2)
+ckbtn2.pack(padx = 2,pady = 2)
+```
+
+4. **Text Dynamic Change** : It is a simple way of creating the checkbutton which usually changes the text dynamically on getting checked or unchecked and below we have an example of it.
+
+*Syntax Code :*
+
+```python
+import tkinter.ttk as tk1
+import tkinter as tk
+
+text1 = tk.StringVar()              # first string variable
+text2 = tk.StringVar()              # second string variable
+
+text1.set('OFF')                    # setting the values for it
+text2.set('ON')
+
+# adding checkbuttons
+cbtn1 = tk1.Checkbutton(window,textvariable = text1,variable = text1,offvalue = "Turned OFF",onvalue = "Turned ON")
+cbtn2 = tk1.Checkbutton(window,textvariable = text1,variable = text1,offvalue = "Switched OFF",onvalue = "Switched ON")
+
+# packing the checkbuttons
+cbtn1.pack(side = 'top',pady = 5)
+cbtn2.pack(side = 'top',pady = 5)
+```
