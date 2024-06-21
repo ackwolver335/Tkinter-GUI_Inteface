@@ -522,3 +522,57 @@ cbtn2 = tk1.Checkbutton(window,textvariable = text1,variable = text1,offvalue = 
 cbtn1.pack(side = 'top',pady = 5)
 cbtn2.pack(side = 'top',pady = 5)
 ```
+
+## Tkinter - RadioButton Widget
+
+The Radiobutton is a standard Tkinter widget used to implement one-of-many selections. Radiobuttons can contain text or images, and you can associate a Python function or method with each button. When the button is pressed, Tkinter automatically calls that function or method.
+
+### Different Usage Methods
+
+1. **Multiple RadioButtons (TK Module)** : This is the first method of adding radiobuttons to the main window of our GUI Applications. It is been established using the RadioButton method with the tkinter Module, together by using the value argument and variable one. Below we have a proper format structure of the code.
+
+*Syntax Code :*
+
+```python
+string1 = tk.StringVar(window,'1')
+
+frm1 = tk.Frame(window,bd = 2,relief = 'ridge',height = 10,width = 200,bg = "lightgreen")               # Frame Adjusted
+frm1.pack(padx = 2,pady = 3)
+
+lb1 = tk.Label(frm1,text = "Radio Buttons",font = ('Fira Code',10),bd = 2,relief = 'groove')            # label created
+lb1.pack(padx = 2,pady = 3)
+
+# Establising RadioButtons
+rd1 = tk.Radiobutton(frm1,text = "Button1",variable = string1,value = '1')
+rd2 = tk.Radiobutton(frm1,text = "Button2",variable = string1,value = '2')
+rd3 = tk.Radiobutton(frm1,text = "Button3",variable = string1,value = '3')
+
+# packing them in the window
+rd1.pack(padx = 2,pady = 3,ipady = 4)
+rd2.pack(padx = 2,pady = 3,ipady = 4)
+rd3.pack(padx = 2,pady = 3,ipady = 4)
+```
+
+2. **Ttk Module RadioButtons** : This is another method of creating radiobuttons using ttk module in tkinter Library. And the difference regarding the both the module is just of the view, which is available in the preview folder in this repo. Further code example is been given below.
+
+*Syntax Code :*
+
+```python
+str1 = tk.StringVar(window,'A')
+
+frm1 = tk.Frame(window,bd = 2,relief = 'ridge',height = 10,width = 200,bg = "lightgreen")               # Frame Adjusted
+frm1.pack(padx = 2,pady = 3)
+
+lb1 = tk.Label(frm1,text = "Radio Buttons",font = ('Fira Code',10),bd = 2,relief = 'groove')            # label created
+lb1.pack(padx = 2,pady = 3)
+
+# Establising RadioButtons
+rd1 = tk.Radiobutton(frm1,text = "Button1",variable = str1,value = 'A')
+rd2 = tk.Radiobutton(frm1,text = "Button2",variable = str1,value = 'B')
+rd3 = tk.Radiobutton(frm1,text = "Button3",variable = str1,value = 'C')
+
+# packing them in the window
+rd1.pack(padx = 2,pady = 3,ipady = 5)
+rd2.pack(padx = 2,pady = 3,ipady = 5)
+rd3.pack(padx = 2,pady = 3,ipady = 5)
+```
