@@ -576,3 +576,110 @@ rd1.pack(padx = 2,pady = 3,ipady = 5)
 rd2.pack(padx = 2,pady = 3,ipady = 5)
 rd3.pack(padx = 2,pady = 3,ipady = 5)
 ```
+
+## Tkinter - Listbox Widget
+
+The ListBox widget is used to display different types of items. These items must be of the same type of font and having the same font color. The items must also be of Text type. The user can select one or more items from the given list according to the requirement.
+
+### General Methods in Listbox
+
+| **Method Name** | **Uses** |
+| --------------- | -------- |
+| **get()** | Used to get all the items of the list in a particular range |
+| **activate(index)** | Used to activate a particular list item as per given index or passed index. |
+| **size()** | Used to get the number of lines in the list |
+| **delete(start,last)** | Used to delete lines as per specified index passed in the function/method |
+| **nearly(y)** | Returns the index of the line nearest to the line whose index is passed |
+| **curseselection()** | Returns a tuple for all the lines which are selected by the user's side |
+
+### Different Methods in ListBox
+
+1. **General Listbox** : This is simple method or procedure for getting the Listbox created in order to learn its creation in main window simply. We further have its different arguments like activestyle, insert() method for placing the list items as per the passed index, and at the end packing it simply using the general pack() method.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 2,relief = 'groove')
+frm1.pack(padx = 2,pady = 3)
+
+lb1 = tk.Listbox(frm1,height = 2,width = 10,activestyle = 'dotbox')
+
+lb1.insert(1,'Data1')                        # inserting data manually
+lb1.insert(2,'Data2')
+lb1.insert(3,'Data3')
+lb1.insert(4,'Data4')
+
+lb1.pack(padx = 2,pady = 3,side = 'left',fill = 'both')
+```
+
+2. **Scrollbar Listbox** : This is another method of creating a listbox together by adding scrollbar to it. It is been done with the use of another widget which is scrollbar to the frame or window in which the ListBox is been created. Below we have further code explanation regarding it.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(height = 2,width = 3,activestyle = 'dotbox')                            # main frame
+frm1.pack(padx = 2,pady = 3)                                                            # frame packed
+
+lb1 = tk.Listbox(frm1,height = 2,width = 3,activestyle = 'dotbox')                      # listbox initiated
+
+# Adding some items to it
+lb1.insert(1,'Data1')
+lb1.insert(2,'Data2')
+
+lb1.pack(padx = 2,pady = 3,side = 'left',fill = 'both')                                 # listbox packed
+
+scrlbar1 = tk.Scrollbar(frm1)                                                           # scrollbar created
+scrlbar1.pack(side = 'right',fill = 'both')                                             # scrollbar packed
+
+lb1.config(yscrollcommand = scrlbar1.set)                                               # configured listbox for setting scrollbar
+scrlbar1.config(command = lb1.yview)                                                    # configured scrollbar
+```
+
+3. **Selecting Particular List Item** : This is particular procedure done in order to select a partcular list item with the use of two method together with the curseselection() and get() method also printing them in the console for getting the review.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 2,relief = 'groove')                                    # frame established
+frm1.pack(padx = 2,pady = 3)                                                        # frame packed
+
+lb1 = tk.Listbox(frm1,height = 2,width = 3,activestyle = 'dotbox')                  # listbox established
+
+# Inserting data or list items
+lb1.insert(1,'Data1')
+lb1.insert(2,'Data2')
+lb1.insert(3,'Data3')
+
+lb1.pack(padx = 2,pady = 3)                                                         # listbox established
+
+def command1():                                                                     # Method for printing selected list item
+    for i in lb1.curseselection():
+        print(lb1.get(i))
+
+btn1 = tk.Button(window,text = 'Print Selected Item',command = command1)
+btn1.pack(padx = 2,pady = 3)
+```
+
+4. **Deleting Particular List Item** : This particular method is been used in order to delete a particular selected item of the list. And this procedure is been established using curseselection() and delete() method as per the code shown below.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 2,relief = 'groove')                        # frame established
+frm1.pack(padx = 2,pady = 3)                                            # frame packed
+
+lb1 = tk.Listbox(frm1,height = 2,width = 10,activegstyle = 'dotbox')    # listbox established
+
+lb1.insert(1,'Data1')                                                   # adding items to the listbox
+lb1.insert(2,'Data2')
+lb1.insert(3,'Data3')
+
+lb1.pack(padx = 2,pady = 3)                                             # packing the listbox
+
+def command1():                                                         # method for the button
+    for i in lb1.curseselection():
+        delete(i)
+
+btn1 = tk.Button(window,text = 'Delete Selected',command = command1)    # button for deleting list items
+btn1.pack(padx = 2,pady = 3)                                            # packing the buttons
+```
