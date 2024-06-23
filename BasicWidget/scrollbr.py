@@ -13,7 +13,7 @@ scrlbr1 = tk.Scrollbar(w1)
 scrlbr1.pack(side = 'right',fill = 'y')
 
 # adding listbox for getting the phase ready
-list1 = tk.Listbox(w1,yscrollcommand = scrlbr1.set,)
+list1 = tk.Listbox(w1,yscrollcommand = scrlbr1.set)
 
 for i in range(1,61):
     list1.insert(i,"Geek" + str(i))
