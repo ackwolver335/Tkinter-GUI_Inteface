@@ -683,3 +683,79 @@ def command1():                                                         # method
 btn1 = tk.Button(window,text = 'Delete Selected',command = command1)    # button for deleting list items
 btn1.pack(padx = 2,pady = 3)                                            # packing the buttons
 ```
+
+## Tkinter - Scrollbar Widget
+
+Python offers multiple options for developing a GUI (Graphical User Interface). Out of all the GUI methods, Tkinter is the most commonly used method. It is a standard Python interface to the Tk GUI toolkit shipped with Python. Python with Tkinter is the fastest and easiest way to create GUI applications. 
+
+Creating a GUI using Tkinter is an easy task.The scrollbar widget is used to scroll down the content. We can also create the horizontal scrollbars to the Entry widget.
+
+### Methods in Scrollbar Widget
+
+| **Method's Name** | **Uses** |
+| ----------------- | -------- |
+| **get()** | Used in order to get the current coordinates of the scrollbar position |
+| **set(first,last)** | It is used for setting up the scrollbar with other available widgets and in other widget we uses the yscrollcommand or xscrollcommand for setting up scrollbar to them |
+
+### Different Implementation of Scrollbar
+
+1. **General Implementation** : This is the simple implementation for getting the scrollbar setup regarding a particular frame or window and in usual way we used to get the config() method for getting the scrollbar added together with the list view. Further will be explained with the help of code below.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 2,relief = 'groove')                        # frame established
+frm1.pack(padx = 2,pady = 3)                                            # frame packed
+
+label1 = tk.Label(frm1,text = 'Scrollbar Frame',font = ('Fira Code',10),bd = 2,relief = 'groove')       # label established
+label1.pack(padx = 2,pady = 3)                                                                          # label packed
+
+scrlbr1 = tk.Scrollbar(frm1)                                                                            # Scrollbar established
+scrlbr1.pack(side = 'right',fill = 'y')                                                                 # Scrollbar packed
+
+list1 = tk.Listbox(frm1,yscrollcommand = scrlbr1.set)                                                   # listbox established and scrollbar set
+
+for i in range(1,50):                                                   # adding items in list
+    list1.insert(i,"Coding" + str(i))
+
+list1.pack(side = 'left',fill = 'both',padx = 2,pady = 3)               # packing listbox
+
+# Configuration of scrollbar regarding listbox
+scrlbr1.config(command = list1.yview)
+```
+
+2. **Using Horizontal Keyword** : This particular scrollbar is setted up with the use of Text() method and particular arguments that are used in this one for converting the particular code into a proper working frame for the main window.
+
+*Syntax Code :*
+
+```python
+frame1 = tk.Frame(w1,bd = 3,height = 10,width = 300,relief = 'groove')
+frame1.pack(padx = 2,pady = 3)
+
+# data to be placed in both vertical format
+data_hz = ("A B C D E F G H J K L M N O P Q R S T U V W X Y Z")
+data_vt = ("a\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\no\np\nq\nr\ns\nu\nv\nw\nx\ny")
+
+# adding scrollbar data here
+svbar = tk.Scrollbar(frame1)
+svbar.pack(side = 'right',fill = 'y')
+
+shbar = tk.Scrollbar(w1,orient = tk.HORIZONTAL)
+shbar.pack(side = 'bottom',fill = 'x')
+
+# creating two different text box
+textbx = tk.Text(frame1,height = 400,width = 400,yscrollcommand = svbar.set,xscrollcommand = shbar.set,wrap = 'none')
+textbx = tk.Text(frame1,height = 400,width = 400,yscrollcommand = svbar.set,xscrollcommand = shbar.set,wrap = 'none')
+
+# packing them all
+textbx.pack(expand = 0,fill = 'both')
+textbx.pack(expand = 0,fill = 'both')
+
+# Inserting them in the frame
+textbx.insert(tk.END,data_hz)
+textbx.insert(tk.END,data_vt)
+
+# changing its configuration for it
+shbar.config(command = textbx.xview)
+svbar.config(command = textbx.yview)
+```
