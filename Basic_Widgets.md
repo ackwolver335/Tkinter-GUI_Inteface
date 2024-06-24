@@ -759,3 +759,45 @@ textbx.insert(tk.END,data_vt)
 shbar.config(command = textbx.xview)
 svbar.config(command = textbx.yview)
 ```
+
+## Tkinter - Menu Widgets
+
+Menus are the important part of any GUI. A common use of menus is to provide convenient access to various operations such as saving or opening a file, quitting a program, or manipulating data. Toplevel menus are displayed just under the title bar of the root or any other toplevel windows.
+
+### Different Args in Menu
+
+1. **Menu() Initiation** : This is the initial method used in order to create a specific menu together by applying different commands in the options available in the list of it. Also the configuration of it at the end together with the window variable created at first.
+
+*Syntax Code :*
+
+```python
+import tkinter as tk                    # main module for GUI Designing
+
+w1 = tk.Tk()                            # window
+w1.title("Menu Widget")                 # window title
+w1.geometry('400x300')                  # window default dimension
+
+# initiating menu bar
+menu1 = tk.Menu(w1,background = 'green',fg = 'red')
+
+file = tk.Menu(menu1,tearoff = 0)                           # created file option
+menu1.add_cascade(label = 'File',menu = file)               # adding file option
+file.add_cascade(label = 'Open New')                        # Options
+file.add_seperator()
+file.add_cascade(label = 'Close',command = w1.destroy)
+
+w1.config(menu = menu1)                                     # menu added to the main window
+```
+
+2. **Option Menu() Method** : This is another kind of method used for specific method in order to specify something with a particular option. Further explanation is been given in the code below.
+
+*Syntax Code :*
+
+```python
+text1 = tk.StringVar()                  # variable for storing selected value
+list1 = ['First','Second','Third','Fourth']
+
+opt1 = tk.OptionMenu(w1,text1,*(list1))
+opt1.config(bg = "lightgreen",fg = "white")
+opt1.grid(pady = 5)
+```
