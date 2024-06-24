@@ -20,7 +20,7 @@ file = tk.Menu(menu1,tearoff = 0)
 menu1.add_cascade(label = 'File',menu = file)                   # adding title to first Options, and it to menu
 file.add_command(label = 'New Page',command = cmd1)
 file.add_command(label = 'Open')
-file.add_separator
+file.add_separator()
 file.add_command(label = 'Close',command = w1.destroy)
 
 # adding more options
