@@ -1,4 +1,4 @@
-# Tkinter Widgets (Basics)
+# 🚀 Tkinter Widgets (Basics)
 
 **Introduction** : Tkinter is Python’s standard GUI (Graphical User Interface) package. tkinter we can use to build out interfaces – such as buttons, menus, interfaces, and various kind of entry fields and display areas. We call these elements Widgets.
 
