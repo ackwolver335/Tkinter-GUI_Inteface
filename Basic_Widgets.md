@@ -801,3 +801,67 @@ opt1 = tk.OptionMenu(w1,text1,*(list1))
 opt1.config(bg = "lightgreen",fg = "white")
 opt1.grid(pady = 5)
 ```
+
+## Tkinter - Canvas Widget
+
+The Canvas widget lets us display various graphics on the application. It can be used to draw simple shapes to complicated graphs. We can also display various kinds of custom widgets according to our needs.
+
+### Different Methods in Canvas
+
+1. **create_line(x1,y1,x2,y2,..,options = ..)** : This method is used in order to create a line inside a particular frame widget or window widget.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 2,relief = 'groove')                                # frame for Canvas
+frm1.pack(padx = 2,pady = 3)
+
+cvs1 = tk.Canvas(frm1,bg = 'lightblue',height = 200,width = 300)                # Canvas established inside Frame
+cvs1.pack(fill = tk.BOTH,expand = True)                                         # Canvas packed
+
+lin1 = cvs1.create_line(15,25,200,25)                                           # straight canvas line
+lin2 = cvs1.create_line(300,35,300,200,dash = (5,2))                            # straight vertical line
+lin3 = cvs1.create_line(55,85,155,85,105,180,55,85)                             # straight triangle line
+```
+
+2. **create_rectangle(x1,y1,x2,y2,..option = ..)** : This method in tkinter Canvas is used for creating rectangular shape inside a particular selected frame or window for different designing with the help of Canvas.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 2,relief = 'groove')                            # Frame Established
+frm1.pack(padx = 2,pady = 3)
+
+c1 = tk.Canvas(frm1,bg = 'lightgreen',height = 100,width = 300)             # Canvas Frame
+c1.pack(padx = 2,pady = 3)
+
+rect1 = c1.create_rectangle(20,40,100,120,fill = 'pink')                    # rectangle created
+```
+
+3. **create_arc(x1,y1,x2,y2,..option = ...)** : This particular method is used in order to create an arc in the Frame or window selected for the Canvas Frame for designing different tools or frames.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 2,relief = 'ridge')                             # frame established
+frm1.pack(padx = 2,pady = 3)                                                # frame packed
+
+c1 = tk.Canvas(frm1,bg = 'lightblue',height = 100,width = 300)              # Canvas Established
+c1.pack(padx = 2,pady = 3)                                                  # Canvas Packed
+
+arc1 = c1.create_arc(180,150,80,210,start = 0,extent = 200,fill = 'red')    # arc created
+```
+
+4. **create_oval(x1,y1,x2,y2,..option = ..)** : This particular method or function of Canvas Class is been used in order to create an oval shape in the frame of Canvas, also the arguments are needed to be filled as per requirements.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 2,relief = 'groove')                            # frame established
+frm1.pack(padx = 2,pady = 3)                                                # frame packed
+
+c1 = tk.Canvas(frm1,bg = 'lightblue',height = 150,width = 300)              # Canvas created
+c1.pack(padx = 2,pady = 3)                                                  # Canvas Packed
+
+oval1 = c1.create_oval(80,30,140,150,fill = 'green')                        # Oval Created
+```
