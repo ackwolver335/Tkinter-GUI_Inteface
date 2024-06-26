@@ -64,3 +64,17 @@ Creating Interactive applications using Tkinter’s, using basic widgets. From s
 | **Scrollbar** | Creates a Scrollbar for providing this feature in the window |
 | **Menu** | Used for creating a Menu Options as a general taskbar for Main Window |
 | **Canvas** | Used for creating graphics and all canvas elements |
+
+## Intermediate Widget for GUI
+
+Creating more Interactive different tools inside your owned application or designed application with the help of different intermediate widgets like Combobox, Scale, Toplevel, message box. These customization tools will surely give you a new look to the Designed Application.
+
+| **Widgets** | **Uses** |
+| :---------- | :------- |
+| **Combobox** | It provides a proper dropdown list of options with editable entry |
+| **Scale** | It is been created in order to select a value within a particular range |
+| **TopLevel** | Used for creating an additional window or dialog box |
+| **Message** | Used for displaying a simple messagebox or notification |
+| **MenuButton** | Creates a Button for opening the menu of the Window |
+| **ProgressBar** | Used for creating a proper progress related to a particular task |
+| **SpinBox** | Provides a numerical input and output options to be shown a interact using Arrow Keys |
