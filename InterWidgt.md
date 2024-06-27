@@ -84,3 +84,74 @@ str1.trace_add('write',getindex)                                        # tracin
 btn1 = tk.Button(window,text = 'Clear All',command = clear_all)         # btn for clearing or reseting
 btn1.pack(padx = 2,pady = 3)
 ```
+
+## Tkinter Intermediate Widget - Scale
+
+The Scale widget is used whenever we want to select a specific value from a range of values. It provides a sliding bar through which we can select the values by sliding from left to right or top to bottom depending upon the orientation of our sliding bar.
+
+### Methods in Scale
+
+| **Methods** | **Uses** |
+| ----------- | -------- |
+| **set(value)** | Used for setting up the values of the scale |
+| **get()** | Returns the value of the scale from selected |
+
+### Implementation of Scales
+
+1. **Horizontal Scale** : This procedure is been used in order to implement the Horizontal Scale properly in the main window designed for solving particular problem with the help of GUI Interface.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 3,relief = 'groove')                    # frame established
+frm1.pack(padx = 2,pady = 3)                                        # frame packed
+
+var1 = tk.DoubleVar()                                               # variable for scale's value
+
+# Implementation of scale
+scl1 = tk.Scale(frm1,variable = var1,from_ = 1,to = 100,orient = tk.HORIZONTAL)         # Scale Established
+scl1.pack(padx = 2,pady = 3)                                                            # Scale packed
+
+lb1 = tk.Label(frm1,text = 'Horizontal Scale',font = ('Fira Code',12))                  # label for Scale
+lb1.pack(padx = 2,pady = 3)                                                             # label packed
+
+# Method for getting the value on click
+def showval():
+    set1 = "Horizontal Scale value : " + str(var1.get())
+    lb2.coonfig(text = set1,font = ('Fira Code',9))
+
+lb2 = tk.Label(frm1)                                                                    # label for value
+lb2.pack(padx = 2,pady = 3)                                                             # label packed
+
+btn1 = tk.Button(frm1,text = 'Display Value',command = showval)                         # Button for value
+btn1.pack(padx = 2,pady = 3)
+```
+
+2. **Vertical Scale** : This procedure is been used for implementing a Vertical Scale in the window for scaling or selecting a particular value in the GUI Interface for selection, further concept will be explained with the help of code given below.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 3,relief = 'groove')                    # frame established
+frm1.pack(padx = 2,pady = 3)                                        # frame packed
+
+var1 = tk.DoubleVar()                                               # variable for scale's value
+
+# Implementation of scale
+scl1 = tk.Scale(frm1,variable = var1,from_ = 1,to = 100,orient = tk.VERTICAL)           # Scale Established
+scl1.pack(padx = 2,pady = 3)                                                            # Scale packed
+
+lb1 = tk.Label(frm1,text = 'Vertical Scale',font = ('Fira Code',12))                    # label for Scale
+lb1.pack(padx = 2,pady = 3)                                                             # label packed
+
+# Method for getting the value on click
+def showval():
+    set1 = "Vertical Scale value : " + str(var1.get())
+    lb2.coonfig(text = set1,font = ('Fira Code',9))
+
+lb2 = tk.Label(frm1)                                                                    # label for value
+lb2.pack(padx = 2,pady = 3)                                                             # label packed
+
+btn1 = tk.Button(frm1,text = 'Display Value',command = showval)                         # Button for value
+btn1.pack(padx = 2,pady = 3)
+```
