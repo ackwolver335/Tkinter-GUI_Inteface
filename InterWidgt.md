@@ -155,3 +155,60 @@ lb2.pack(padx = 2,pady = 3)                                                     
 btn1 = tk.Button(frm1,text = 'Display Value',command = showval)                         # Button for value
 btn1.pack(padx = 2,pady = 3)
 ```
+
+## Tkinter Intermediate Widget - TopLevel
+
+A Toplevel widget is used to create a window on top of all other windows. The Toplevel widget is used to provide some extra information to the user and also when our program deals with more than one application. These windows are directly organized and managed by the Window Manager and do not need to have any parent window associated with them every time.
+
+### Common Methods of Toplevel
+
+| **Method's Name** | **Uses** |
+| ----------------- | -------- |
+| **iconify()** | It helps the developer for turning a particular window into an icon |
+| **deiconify()** | It helps to turn that particular window back into that particular icon |
+| **state()** | It is used for getting the state of the window to be returned |
+| **withdraw()** | It is used for removing the window from the screen |
+| **title()** | It is used for defining the title of the window |
+| **frame()** | It returns the window identifier which is system specific |
+
+### Different Ways for Toplevel
+
+1. **General Implementation** : This is a simple method or procedure to work on the Topleve Widget and is useful when we need to take work from more than one Window at a time in order to implement more work from the user. Further explanation is been given in the code below. This is simply used for creating more than one window at a time.
+
+*Syntax Code :*
+
+```python
+lb1 = tk.Label(window,text = 'Main Window',font = ('Fira Code',10))                 # Label Established
+lb1.pack(padx = 2,pady = 3)                                                         # Label packed
+
+top1 = tk.Toplevel(window)
+top1.title('Second Window')
+top1.geometry('300x200')
+
+btn1 = tk.Button(top,text = 'Close',command = top1.destroy)                         # Button for Closing Window
+btn1.pack()                                                                         # Button packed
+
+top1.mainloop()
+```
+
+2. **Generating Toplevel** : This is another method for the implementation of the Toplevel Widget for implementing more than one window, and in the similar way we can generate more than one window at a time.
+
+*Syntax Code :*
+
+```python
+l1 = tk.Label(window,text = 'Main Window Label',font = ('Fira Code',10))            # Label Established
+l1.pack()                                                                           # Label Packed
+
+def cmd1():
+    top1 = tk.Toplevel(window)
+    top1.title('Second Window')
+    top1.geometry('400x200')
+
+    btn1 = tk.Button(top1,text = 'Close',command = top1.destroy)                    # Button For Closing Window
+    btn1.pack(padx = 2,pady = 3)                                                    # Button Packed
+
+    top1.mainloop()
+
+btn1 = tk.Button(window,text = 'Open Another Window',command = cmd1)                # Open another window
+btn1.pack(padx = 2,pady = 4)                                                        # Button Packed
+```
