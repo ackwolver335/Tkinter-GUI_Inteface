@@ -235,3 +235,30 @@ lb1.pack()
 msg1 = tk.Message(frm1,text = 'This is a general Message in GUI Window',font = ('Fira Code'.12))        # Message in GUI
 msg1.pack()
 ```
+
+## Tkinter Intermediate Widget - MenuButton
+
+The Menubutton widget can be defined as the drop-down menu that is shown to the user all the time. The Menubutton is used to implement various types of menus in the python application.
+
+### Different Methods in MenuButton
+
+1. **General Implementation** : This is an overall procedure for the implementation of MenuButton inside the main GUI Window regarding view and purpose for different methods for getting view from the user and developers.
+
+*Syntax Code :*
+
+```python
+menubtn = tk.Menubutton(window,text = 'Menu')           # Menu Button Implementation
+menubtn.menu = tk.Menu(menubtn)                         # Adding Menu Widget
+menubtn['menu'] = menubtn
+
+var1 = tk.IntVar()                                      # Variables for getting input regarding menu options
+var2 = tk.IntVar()
+var3 = tk.IntVar()
+
+menubtn.menu.add_checkbutton(label = 'Label1',variable = var1)          # First Option
+menubtn.menu.add_checkbutton(label = 'Label2',variable = var2)          # Second Option
+menubtn.menu.add_checkbutton(label = 'Label3',variable = var3)          # Third Option
+
+# Packing the Menu
+menubtn.pack(padx = 2,pady = 3)
+```
