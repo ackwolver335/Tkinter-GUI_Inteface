@@ -262,3 +262,92 @@ menubtn.menu.add_checkbutton(label = 'Label3',variable = var3)          # Third 
 # Packing the Menu
 menubtn.pack(padx = 2,pady = 3)
 ```
+
+## Tkinter Intermediate Widget - Progress Bar
+
+The purpose of this widget is to reassure the user that something is happening. It can operate in one of two modes –
+
+In determinate mode, the widget shows an indicator that moves from beginning to end under program control.
+In indeterminate mode, the widget is animated so the user will believe that something is in progress. In this mode, the indicator bounces back and forth between the ends of the widget.
+
+## Different Implementation of Progressbar
+
+1. **General Implementation (Determinate Mode)** : In this particular implementation, we uses the time module for running the progressbar in a proper slow way that a continuous process would be observable. And also some of the method (update_idletasks()), also the Progressbar is a part of ttk module of tkinter library in python.
+
+*Syntax Code :*
+
+```python
+import tkinter as tk
+import tkinter.ttk as tk1
+import time as t
+
+frm1 = tk.Frame(window)                     # frame for progressbar created
+frm1.pack()
+
+pgrs1 = tk1.Progressbar(frm1,orient = tk.HORIZONTAL,length = 100,mode = 'determinate')          # Progressbar Implemented
+pgrs1.pack(padx = 2,pady = 3)                                                                   # Progressbar Packed
+
+def start1():
+    pgrs1['value'] = 20
+    frm1.update_idletasks()
+    t.sleep(1)
+
+    pgrs1['value'] = 40
+    frm1.update_idletasks()
+    t.sleep(1)
+
+    pgrs1['value'] = 60
+    frm1.update_idletasks()
+    t.sleep(1)
+
+    pgrs1['value'] = 80
+    frm1.update_idletasks()
+    t.sleep(1)
+
+    pgrs1['value'] = 100
+    frm1.update_idletasks()
+    t.sleep(1)
+
+btn1 = tk.Button(frm1,text = 'Start',command = start1)          # Button for Starting Progress Bar
+btn1.pack(padx = 2,pady = 3)
+```
+
+2. **Implementation in Indeterminate Mode** : This mode is specified for working over to the pointing Progressbar Widget, referring to the main GUI Progressbar in particular increased point.
+
+*Syntax Code :*
+
+```python
+import tkinter as tk
+import tkinter.ttk as tk1
+import time as t
+
+frm1 = tk.Frame(window)                     # frame for progressbar created
+frm1.pack()
+
+pgrs1 = tk1.Progressbar(frm1,orient = tk.HORIZONTAL,length = 100,mode = 'indeterminate')        # Progressbar Implemented
+pgrs1.pack(padx = 2,pady = 3)                                                                   # Progressbar Packed
+
+def start1():
+    pgrs1['value'] = 20
+    frm1.update_idletasks()
+    t.sleep(1)
+
+    pgrs1['value'] = 40
+    frm1.update_idletasks()
+    t.sleep(1)
+
+    pgrs1['value'] = 60
+    frm1.update_idletasks()
+    t.sleep(1)
+
+    pgrs1['value'] = 80
+    frm1.update_idletasks()
+    t.sleep(1)
+
+    pgrs1['value'] = 100
+    frm1.update_idletasks()
+    t.sleep(1)
+
+btn1 = tk.Button(frm1,text = 'Start',command = start1)          # Button for Starting Progress Bar
+btn1.pack(padx = 2,pady = 3)
+```
