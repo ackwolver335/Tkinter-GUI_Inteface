@@ -212,3 +212,26 @@ def cmd1():
 btn1 = tk.Button(window,text = 'Open Another Window',command = cmd1)                # Open another window
 btn1.pack(padx = 2,pady = 4)                                                        # Button Packed
 ```
+
+## Tkinter Intermediate Widget - Message
+
+Python offers multiple options for developing a GUI (Graphical User Interface). Out of all the GUI methods, Tkinter is the most commonly used method. It is a standard Python interface to the Tk GUI toolkit shipped with Python. 
+
+Python with Tkinter is the fastest and easiest way to create GUI applications. Creating a GUI using Tkinter is an easy task. The Message widget is used to show the message to the user regarding the behavior of the python application. The message text contains more than one line.
+
+### Different Implementation of Message
+
+1. **General Implementation** : This is a general procedure for implementing the Message Widget in the Main GUI Window, it is been done with the help of tk Module. Further concept will be explained with the help of code given below.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 3,relief = 'groove')                                                        # frame Established
+frm1.pack()
+
+lb1 = tk.Label(frm1,text = 'Simple Label',font = ('Fira Code',10))                                      # Label Created
+lb1.pack()
+
+msg1 = tk.Message(frm1,text = 'This is a general Message in GUI Window',font = ('Fira Code'.12))        # Message in GUI
+msg1.pack()
+```
