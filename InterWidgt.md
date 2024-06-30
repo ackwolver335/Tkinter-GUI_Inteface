@@ -351,3 +351,113 @@ def start1():
 btn1 = tk.Button(frm1,text = 'Start',command = start1)          # Button for Starting Progress Bar
 btn1.pack(padx = 2,pady = 3)
 ```
+
+## Tkinter Intermediate Widget - Spinbox
+
+The Spinbox widget in Tkinter is a numerical input field that allows users to select a value from a predefined range by either typing directly into the widget or by using up and down arrow buttons to increment or decrement the value.
+
+### Methods used with Spinbox
+
+| **Method's Name** | **Uses** |
+| ----------------- | -------- |
+| **delete()** | Used in order to delete the value in the entry as per the given index |
+| **get()** | It is used for retrieving the value from the entry |
+| **identify()** | It returns a particular value like, number, entry, buttonup or buttondown |
+| **index()** | It returns an absolute value as per the index passed in it |
+| **insert()** | Used for inserting the values at the specific passed index |
+| **invoke()** | Used to invoke the callback associated with the widget |
+
+### Methods Implementation in Spinbox
+
+1. **General Implementation** : It is a general structure of code used in order to implement the Spinbox Widget in the GUI Window implemented for specific purpose regarding the user interaction, further one will be explained with the code given below.
+
+*Syntax Code :*
+
+```python
+spn1 = tk.Spinbox(window,from_ = 0,to = 100,relief = 'sunken',font = ('Fira Code',12))
+spn1.config(state = 'normal',bd = 2,relief = 'groove',justify = 'center',wrap = True)
+spn1.pack()
+```
+
+2. **delete() Method** : This method is used in order to delete a particular value from the Spinbox entry as per the given index, and the value will be deleted as per the given index together by using the button widget from the tkinter Module.
+
+*Syntax Code :*
+
+```python
+spn1 = tk.Spinbox(window,from_ = 0,to = 100,width = 5,relief = 'sunken',font = ('Fira Code',10))
+spn1.config(state = 'normal',bd = 2,justify = 'right',wrap = True)
+spn1.pack()
+
+def cmd():
+    spn1.delete(0)
+
+btn1 = tk.Button(window,text = 'Delete',command = cmd)
+btn1.pack(padx = 2,pady = 3)
+```
+
+3. **identify() Method** : This method is used in order to check the range if the values comes under the identification as per the given range for checking the values if the user enters in the given range.
+
+*Syntax Code :*
+
+```python
+spn1 = tk.Spinbox(window,from_ = 0,to = 100,width = 5,relief = 'sunken',font = ('Fira Code',10))
+spn1.config(state = 'normal',bd = 2,justify = 'right',wrap = True)
+spn1.pack()
+
+def cmd():
+    val1 = spn1.identify(0,4)
+    print(val1)
+
+btn = tk.Button(window,text = 'Identify',command = cmd)
+btn.pack()
+```
+
+3. **get() Method** : This method is used in order to get the values from the range given at the place of method declaration in the method, and also this is been implemented with the help of Button Widget in it.
+
+*Syntax Code :*
+
+```python
+spn1 = tk.Spinbox(window,from_ = 0,to = 100,width = 5,relief = 'sunken',font = ('Fira Code',10))
+spn1.config(state = 'normal',bd = 2,justify = 'right',wrap = True)
+spn1.pack()
+
+def cmd():
+    data = spn1.get()
+    print(data)
+
+btn = tk.Button(window,text = 'Get',command = cmd)
+btn.pack()
+```
+
+4. **index() Method** : This method is used for getting an absolute value from the entry available in Spinbox, and also below we have the code for its implementation and proper working with Button Widget. 
+
+*Syntax Code :*
+
+```python
+spn1 = tk.Spinbox(window,from_ = 0,to = 100,width = 5,relief = 'sunken',font = ('Fira Code',10))
+spn1.config(state = 'normal',bd = 2,justify = 'right',wrap = True)
+spn1.pack()
+
+def cmd():
+    val1 = spn1.index(0)
+    print(data)
+
+btn = tk.Button(window,text = 'Get Value',command = cmd)
+btn.pack()
+```
+
+5. **insert() Method** : This method is been used to insert the values in the Spinbox entry level for adding data to the our side, in order to work together with the values entered with the user's values.
+
+*Syntax Code :*
+
+```python
+spn1 = tk.Spinbox(window,from_ = 0,to = 100,width = 5,relief = 'sunken',font = ('Fira Code',10))
+spn1.config(state = 'normal',bd = 2,justify = 'right',wrap = True)
+spn1.pack()
+
+def cmd():
+    spn1.insert(0,'12')
+
+btn = tk.Button(window,text = 'Insert',command = cmd)
+btn.pack()
+```
