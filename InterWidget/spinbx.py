@@ -35,7 +35,8 @@ btn3 = tk.Button(w1,text = 'Check',command = cmd4)      # Button for using ident
 btn3.pack(padx = 2,pady = 3)
 
 def cmd5():
-    spn1.index(2)                                       # index() method to get the value at specified index
+    data1 = spn1.index(2)                                       # index() method to get the value at specified index
+    print(data1)
 
 btn4 = tk.Button(w1,text = 'Check Index',command = cmd5)        # Button for using index() method
 btn4.pack(padx = 2,pady = 4)
