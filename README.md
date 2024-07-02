@@ -78,3 +78,15 @@ Creating more Interactive different tools inside your owned application or desig
 | **MenuButton** | Creates a Button for opening the menu of the Window |
 | **ProgressBar** | Used for creating a proper progress related to a particular task |
 | **SpinBox** | Provides a numerical input and output options to be shown a interact using Arrow Keys |
+
+## Advance Widget with GUI
+
+There are various types of widgets available in Tkinter such as button, frame, label, menu, scrolledtext, canvas and many more. A widget is an element that provides various controls. ScrolledText widget is a text widget with a scroll bar. 
+
+| **Widgets** | **Uses** |
+| :---------- | :------- |
+| **ScrolledText** | Used for creating text widget together with the built-in Scrollbars |
+| **Treeview** | It is used for getting the hierarchical data in a tree-like structure. |
+| **MessageBox** | Used for getting the dialog box displayed the warnings or messages,.etc |
+| **Treeview Scrollbar** | Used for adding scrollbar to the Treeview |
+| **Text** | It creates multiple line text input with advance editable capacities |
