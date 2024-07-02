@@ -17,3 +17,50 @@ There are various types of widgets available in Tkinter such as button, frame, l
 | **MessageBox** | Used for getting the dialog box displayed the warnings or messages,.etc |
 | **Treeview Scrollbar** | Used for adding scrollbar to the Treeview |
 | **Text** | It creates multiple line text input with advance editable capacities |
+
+## Tkinter Advance Widget - ScrolledText
+
+The tkinter.scrolledtext module provides the text widget along with a scroll bar. This widget helps the user enter multiple lines of text with convenience. Instead of adding a Scroll bar to a text widget, we can make use of a scrolledtext widget that helps to enter any number of lines of text.
+
+### Different Implementation of ScrolledText
+
+1. **Entry ScrolledText** : This is first procedure for the implementation of the ScrolledText Widget in Advance Widget Categories of Tkinter, in this we'll have some block with some property like of entry and scrollbar. Further explanation will be available with the help of code given below.
+
+*Syntax Code :*
+
+```python
+import tkinter as tk
+from tkinter import scrolledtext as st
+
+frm1 = tk.Frame(w1,bd = 2,relief = 'groove')                    # frame for scrolledtext
+frm1.pack(padx = 2,pady = 3)                                    # packing the frame
+
+lb1 = tk.Label(frm1,text = 'ScrolledText Widget',font = ('Fira Code',12))       # label for Explanation
+lb1.pack(padx = 2,pady = 3)                                                     # label packed
+
+scrolldtxt1 = st.ScrolledText(frm1,wrap = tk.WORD,width = 20,height = 4,font = ('Fira Code',10))
+scrolldtxt1.pack(padx = 2,pady = 3)
+scrolldtxt1.focus()                             # for getting the focus on window
+```
+
+2. **ReadOnly ScrolledText** : This is another procedure that is used in order to create a readonly structure of the first one that is been explained above. Other properties are all same as mentioned above. Further explanation is been available in the code below.
+
+*Syntax Code :*
+
+```python
+import tkinter as tk
+from tkinter import scrolledtext as st
+
+frm1 = tk.Frame(frm1,bd = 3,relief = 'ridge')                       # frame for scrolledtext established
+frm1.pack(padx = 2,pady = 3)                                        # frame packed
+
+lb1 = tk.Label(w1,text = 'Readable ScrolledText',font = ('Fira Code',12))           # label for it established
+lb1.pack(padx = 2,pady = 3)                                                         # label packed
+
+scrolldtxt1 = st.ScrolledText(frm1,wrap = tk.WORD,width = 30,height = 6,font = ('Fira Code',10))
+scrolldtxt1.pack(padx = 2,pady = 3)
+
+# inserting data into the ScrolledText Area
+scrolldtxt1.insert(tk.INSERT,'This is the simple text\nAnd this is another line content')
+scrolldtxt1.configure(state = 'disabled')
+```
