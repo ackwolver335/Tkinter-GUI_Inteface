@@ -64,3 +64,37 @@ scrolldtxt1.pack(padx = 2,pady = 3)
 scrolldtxt1.insert(tk.INSERT,'This is the simple text\nAnd this is another line content')
 scrolldtxt1.configure(state = 'disabled')
 ```
+
+## Tkinter Advance Widget - Treeview
+
+This widget is helpful in visualizing and permitting navigation over a hierarchy of items. It can display more than one feature of every item in the hierarchy. It can build a tree view as a user interface like in Windows explorer. Therefore, here we will use Tkinter in order to construct a hierarchical treeview in the Python GUI application. 
+
+### General Code Implementation
+
+In Treeview, this is the general implementation done with the help of Treeview() method of *ttk* Module in Tkinter Library and some of the methods like insert and move are used in order to properly implement the Treeview Widget in the Tkinter Window. Below we have one code example for its explanation.
+
+*Syntax Code :*
+
+```python
+import tkinter.ttk as tk1
+
+treeview = tk1.Treeview(window)                         # Treeview Implemented
+treeview.pack(padx = 2,pady = 3)                        # Treeview packed
+
+treeview.insert('',0,'item1',text = 'Data1')            # Inserting the Data Elements
+treeview.insert('',1,'item1',text = 'Data2')
+treeview.insert('',2,'item1',text = 'Data3')
+treeview.insert('',3,'item1',text = 'Data4')
+
+treeview.insert('item2','end','Part1',text = 'Data3')   # Inserting more than one attribute
+treeview.insert('item2','end','Part1',text = 'Data3')
+treeview.insert('item3','end','Part2',text = 'Data4')
+treeview.insert('item3','end','Part2',text = 'Data4')
+treeview.insert('item4','end','Part3',text = 'Data5')
+treeview.insert('item4','end','Part3',text = 'Data5')
+
+# Placing the items at the right side
+treeview1.move('item2','item1',0)
+treeview1.move('item3','item1',0)
+treeview1.move('item4','item1',0)
+```
