@@ -132,3 +132,37 @@ mgbx5 = mgbx.askokcancel('Question-title','Question Main title')
 mgbx6 = mgbx.askyesno('Question-Title','Finding the values ?')
 mgbx7 = mgbx.askretrycancel('Recheck Question','Try Again ?')
 ```
+
+## Tkinter Advance Widget - Treeview Scrollbar
+
+When a scrollbar uses treeview widgets, then that type of scrollbar is called as treeview scrollbar. Where, a treeview widget is helpful in displaying more than one feature of every item listed in the tree to the right side of the tree in the form of columns. However, it can be implemented using tkinter in python with the help of some widgets and geometry management methods as supported by tkinter.
+
+### Its Code Implementation
+
+It is been initiated with the help of ttk Module of the Tkinter Library and the Treeview() together with the Scrollbar Method is been used together in order to form a proper Treeview Scrollbar. It is been implemented together with its different methods like columns, heading and insert(),..etc more information is been given below.
+
+*Syntax Code :*
+
+```python
+import tkinter.ttk as tk1
+
+treevw = tk1.Treeview(window,selecmode = 'browse')                                  # Treeview Implemented
+treevw.pack(side = 'right')
+
+verscrlbr = tk1.Scrollbar(window,orient = 'vertical',command = treevw.yview)        # Scrollbar Implemented
+verscrlbr.pack(side = 'right',fill = 'x')
+
+# Adding Scrollbar Configuration
+treevw.configure(xscrollcommand = verscrlbr.set)
+treevw['columns'] = ('1','2')
+treevw['show'] = 'headings'
+
+treevw.column('1',width = 60,anchor = 'c')
+treevw.column('2',width = 60,anchor = 'se')
+
+treevw.heading('1',text = 'Name')
+treevw.heading('2',text = 'Section')
+
+treevw.insert('','end',text = 'L1',values = ('Ack','B'))
+treevw.insert('','end',text = 'L2',values = ('Abhay','B'))
+```
