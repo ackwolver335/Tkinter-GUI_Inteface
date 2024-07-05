@@ -166,3 +166,41 @@ treevw.heading('2',text = 'Section')
 treevw.insert('','end',text = 'L1',values = ('Ack','B'))
 treevw.insert('','end',text = 'L2',values = ('Abhay','B'))
 ```
+
+## Tkinter Advance Widget - Text
+
+Text Widget is used where a user wants to insert multiline text fields. This widget can be used for a variety of applications where the multiline text is required such as messaging, sending information or displaying information and many other tasks. We can insert media files such as images and links also in the Textwidget.
+
+### Some Common Methods in Text
+
+| **Method's Name** | **Uses** |
+| ----------------- | -------- |
+| **index()** | It is used in order to get a specific index of a particular passed argument |
+| **insert()** | Used in order to add or insert the string at a specific passed index as argument |
+| **see()** | Used for checking if the string is present at the available index which passed |
+| **get()** | It is used for getting the string returned of a particular range |
+| **delete()** | Used for deleting the data or string at a specific passed index |
+
+### Code Implementation of it 
+
+As mentioned above we have several different methods in order to implement a proper text in the Tkinter's Window, together by following a proper code format and the packing or placing regarding a particular position in the GUI Window. Further code explanation is been given in the code mentioned below.
+
+*Syntax Code :*
+
+```python
+frm1 = tk.Frame(window,bd = 3,relief = 'raised')                                    # Frame Added
+frm1.pack(padx = 2,pady = 3)                                                        # Frame packed in window
+
+text = tk.Text(frm1,height = 5,width = 20)                                          # Text Widget added
+text.pack(padx = 2,pady = 3)                                                        # Text packed in window
+
+lb1 = tk.Label(frm1,text = 'Text Widget in Window',font = ('Fira Code',12))         # Label Initiated
+lb1.pack(padx = 2,pady = 3)                                                         # Label Packed
+
+# adding data to the Text Widget
+data = "This is a general text data shown as a sample example in this GUI Window"   # Data to be added
+text.insert(tk.END,data)                                                            # Data Inserted
+
+btn1 = tk.Button(frm1,text = 'Close Window',font = ('Fira Code',10))                # Button Initiated
+btn1.pack(padx = 2,pady = 4)                                                        # Button packed or placed
+```
