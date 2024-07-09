@@ -64,3 +64,39 @@ e2 = tk.Entry(frm1)
 e1.grid(row = 0,column = 1,pady = 2)
 e2.grid(row = 1,column = 1,pady = 2)
 ```
+
+## Pack() Method - Geometry Management
+
+The Pack geometry manager packs widgets relative to the earlier widget. Tkinter literally packs all the widgets one after the other in a window.  We can use options like fill, expand, and side to control this geometry manager.
+
+*Syntax Code :*
+
+```python
+# Creating a Frame here for using pack method
+frm1 = tk.Frame(w1)
+frm1.pack(fill = 'both',expand = True)
+
+# Adding some widgets to it 
+btn1 = tk.Button(frm1,text = 'Button1',background = 'lightblue')
+btn1.pack(fill = 'both',expand = True,side = 'top')
+
+btn2 = tk.Button(frm1,text = 'Button2',background = 'lightgreen')
+btn2.pack(fill = 'both',expand = True,side = 'bottom')
+```
+
+## 📫 How to Reach Me
+
+- **Email** - abhaych335@gmail.com
+- **Instagram** - [@coding.needs](https://www.instagram.com/coding.needs/)
+- **Twitter** - [@AbhayCh84760](https://x.com/AbhayCh84760)
+
+## Support Me
+
+If you likes what I do and want to support me :
+
+- Give me a ⚡️ Star on my Repo
+- Share my [work](https://github.com/ackwolver335/Tkinter-GUI_Inteface) and [profile](https://github.com/ackwolver335) with your network
+
+Thanks for visiting my Github Repo ! Hope you find my projects useful, helpful and inspiring. Let's connect and collaborate to build something amazing !
+
+Abhay Chaudhary [Ack Wolver](https://github.com/ackwolver335/ackwolver335) !
