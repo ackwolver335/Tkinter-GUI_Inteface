@@ -91,6 +91,32 @@ There are various types of widgets available in Tkinter such as button, frame, l
 | **Treeview Scrollbar** | Used for adding scrollbar to the Treeview |
 | **Text** | It creates multiple line text input with advance editable capacities |
 
+## Geometry Management in GUI
+
+Efficiently managing the geometry of Tkinter windows and widgets is essential for creating polished user interfaces. In this section, we’ll cover everything from setting window dimensions to handling resizing, padding, and widget positioning. 
+
+We’ll explore methods like place(), grid(), and pack() to help you create organized and responsive layouts. Additionally, we’ll delve into advanced techniques like the PanedWindow widget.
+
+### Different Methods in Geometry Management
+
+| **Method's Name** | **Uses** |
+| :---------------- | :------- |
+| **place()** | Used for providing specific position in the Entire GUI Window. |
+| **pack()** | Used for placing at the position after the earlier widget. |
+| **grid()** | It is used for placing the elements in the format of grid view or grid structure. |
+
+## Fonts, Colors, Images and Canvas in GUI
+
+The choice of fonts, colors, and images can make a significant impact on the user experience and the overall aesthetic appeal of an application. In this section, we will delve into the intricacies of customizing fonts, exploring a variety of color options, and incorporating images into your projects.
+
+| **Widgets** | **Uses** |
+| ----------- | -------- |
+| **Fonts** | This Widget contains differnet implementation of Fonts |
+| **Colors** | This Widget is used for setting up the colors in other different Widgets |
+| **Images** | It is used for setting up images in different position and frames in GUI Framework |
+| **Canvas** | Canvas in GUI Framework is used for setting shapes and graphics in Window |
+| **Binding** | Binding method is used in order to change the configuration of different widgets and frames |
+
 ## 📫 How to Reach Me
 
 - **Email** - abhaych335@gmail.com
